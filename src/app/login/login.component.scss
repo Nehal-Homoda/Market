@@ -2,22 +2,25 @@
   border-radius:$val ;
   border:$val solid $color;
   }
+  @mixin form ($height){
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    line-height: 2;
+    margin: auto;
+    margin-top: 10%;
+    height: $height;
+    padding: 20px;
+    justify-content: center;
+    background-color: rgba(247, 218, 182, 0.993);
+  }
   $basecolor:rgba(255, 115, 0, 0.774);
 
 
 .form
 {
 @include border(3px,$basecolor);
-display: flex;
-flex-direction: column;
-width: 25%;
-line-height: 2;
-margin: auto;
-margin-top: 10%;
-height: 300px;
-padding: 20px;
-justify-content: center;
-background-color: rgba(247, 218, 182, 0.993);
+@include form(300px);
 label{
   font-size: larger;
   padding: 5px;
