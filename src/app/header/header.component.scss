@@ -1,0 +1,15 @@
+
+$background:rgba(255, 115, 0, 0.774);
+$padding:30px;
+.header{
+  background-color: $background;
+  padding: $padding;
+  a{
+    margin-left: 3%;
+    position: relative;
+   left: 80%;
+   font-size: larger;
+   text-decoration: none;
+   color: white;
+  }
+}
