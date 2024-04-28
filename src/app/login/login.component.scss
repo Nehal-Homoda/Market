@@ -1,0 +1,40 @@
+@mixin border($val,$color){
+  border-radius:$val ;
+  border:$val solid $color;
+  }
+  $basecolor:rgba(255, 115, 0, 0.774);
+
+
+.form
+{
+@include border(3px,$basecolor);
+display: flex;
+flex-direction: column;
+width: 25%;
+line-height: 2;
+margin: auto;
+margin-top: 10%;
+height: 300px;
+padding: 20px;
+justify-content: center;
+background-color: rgba(247, 218, 182, 0.993);
+label{
+  font-size: larger;
+  padding: 5px;
+}
+input{
+  width: 100%;
+  height: 7%;
+
+
+}
+button{
+
+  width: 20%;
+  height: 15%;
+margin: auto;
+&:hover{
+  background-color: $basecolor;
+}
+}
+}
