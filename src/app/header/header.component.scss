@@ -4,10 +4,12 @@ $padding:30px;
 .header{
   background-color: $background;
   padding: $padding;
+  display: flex;
+  justify-content:flex-end;
+  gap: 40px;
   a{
-    margin-left: 3%;
     position: relative;
-   left: 80%;
+  //  left: 80%;
    font-size: larger;
    text-decoration: none;
    color: white;
