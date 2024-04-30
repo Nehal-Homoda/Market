@@ -1,11 +1,13 @@
 import { Component } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { CommonModule } from '@angular/common';
+import { FormBuilder, FormGroup, Validators ,FormsModule} from '@angular/forms';
+
 
 @Component({
   selector: 'app-signup',
   standalone: true,
-  imports: [ReactiveFormsModule],
+  imports: [ReactiveFormsModule,FormsModule,CommonModule],
   templateUrl: './signup.component.html',
   styleUrl: './signup.component.scss',
 })
@@ -13,7 +15,7 @@ export class SignupComponent {
   userReg: FormGroup;
   constructor(private fb: FormBuilder) {
     this.userReg = this.fb.group({
-      firstName: ['', Validators.required],
+      firstName: ['', [Validators.required,Validators.pattern('[a-zA-Z]')]],
       LastName: ['', Validators.required],
       Email: ['', Validators.required],
       Password: ['', Validators.required],

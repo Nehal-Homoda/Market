@@ -7,6 +7,11 @@
     id="exampleFormControlInput1"
     placeholder="your Fname"
   />
+  <div [hidden]="fisrtName?.valid||fisrtName?.untouched">
+   <span *ngIf="fisrtName?.errors?.['required']">First Name is required </span>
+   <span *ngIf="fisrtName?.errors?.['pattern']">first Name doesn't match</span>
+  </div>
+
   <label for="inputPassword5" class="form-label">LastName</label>
   <input
     formControlName="LastName"
