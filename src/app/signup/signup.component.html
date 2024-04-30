@@ -1,6 +1,7 @@
-<form action="" class="signupform">
+<form [formGroup]="userReg" class="signupform">
   <label for="exampleFormControlInput1" class="form-label">firstName</label>
   <input
+    formControlName="firstName"
     type="text"
     class="form-control"
     id="exampleFormControlInput1"
@@ -8,6 +9,7 @@
   />
   <label for="inputPassword5" class="form-label">LastName</label>
   <input
+    formControlName="LastName"
     type="text"
     class="form-control"
     id="exampleFormControlInput1"
@@ -16,6 +18,7 @@
 
   <label for="inputPassword5" class="form-label">Email</label>
   <input
+    formControlName="Email"
     type="email"
     class="form-control"
     id="exampleFormControlInput1"
@@ -24,6 +27,7 @@
 
   <label for="inputPassword5" class="form-label">Password</label>
   <input
+    formControlName="Password"
     type="password"
     id="inputPassword5"
     class="form-control"
@@ -32,6 +36,7 @@
 
   <label for="inputPassword5" class="form-label">Confirmed Password</label>
   <input
+    formControlName="ConfirmedPassword"
     type="password"
     id="inputPassword5"
     class="form-control"
